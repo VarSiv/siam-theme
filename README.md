@@ -1,3 +1,36 @@
+At the end is the original readme, may be useful for future reference
+siam-theme docs:
+Useful links
+a. ghost docs: https://ghost.org/docs/install/local/
+b. fCC tutorial: https://www.freecodecamp.org/news/how-to-build-a-ghost-cms-theme/
+c. good github starter theme: https://github.com/TryGhost/Starter?tab=readme-ov-file
+
+enviroment setup:
+1. install ghost locally
+```bash
+npm install ghost-cli@latest -g
+#cd into empty directory, ghost will install here
+ghost install local
+```
+2. get dependencies
+```bash
+npm install
+```
+3. install gscan to validate theme
+```bash
+npm install gscan -g
+```
+4. make the zip and scan it. upload zip as the new theme
+```bash
+npm run zip
+gscan -z /path/to/downloads/theme.zip
+```
+
+
+
+
+
+
 # Casper
 
 The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper! If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
