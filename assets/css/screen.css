@@ -113,14 +113,13 @@ production stylesheet in assets/built/screen.css
     z-index: 100;
     display: flex;
     align-items: center;
-    padding-top: calc(19vmin + 44px);
-    padding-bottom: 19vmin;
+    
     text-align: center;
     color: var(--color-darkgrey);
 }
 
 .has-cover .site-header-content {
-    min-height: 560px;
+    min-height: 90px;
     background-color: var(--ghost-accent-color);
     color: #fff;
 }
@@ -261,7 +260,18 @@ production stylesheet in assets/built/screen.css
 
 /* 4. Site Navigation
 /* ---------------------------------------------------------- */
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
+.nav-left, .nav-middle, .nav-right {
+    list-style: none;
+}
+.nav-right{
+    align-items: end;
+}
 .gh-head {
     height: 88px;
     font-size: 1.6rem;

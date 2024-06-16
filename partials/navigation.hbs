@@ -1,0 +1,21 @@
+<!--<ul class="nav">
+    <li class="nav-home nav-current"><a href="reddit.com"><img src="{{@site.logo}}" alt="{{@site.title}}"></a></li>
+</ul> -->
+
+<div class="nav-container">
+    <ul class="nav nav-left">
+        {{#foreach navigation}}
+            <li class="{{slug}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+        {{/foreach}}
+    </ul>
+
+    <ul class="nav nav-middle">
+        <li><a href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}"></a></li>
+    </ul>
+
+    <ul class="nav nav-right">
+        <li class="nav-about"><a href="{{@site.url}}/about">About Us</a></li>
+        <li class="nav-search"><a href="{{@site.url}}/search">Search</a></li>
+        <li class="nav-signup"><a href="{{@site.url}}/signup">Sign Up</a></li>
+    </ul>
+</div>
