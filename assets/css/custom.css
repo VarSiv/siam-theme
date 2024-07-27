@@ -1,0 +1,45 @@
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.featured-post {
+    margin-bottom: 40px;
+}
+
+.featured-post-image {
+    width: 70%;
+    height: 60vh; /* Adjust this value to control the height */
+    overflow: hidden;
+}
+
+.featured-post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-post-content {
+    padding: 20px 0;
+}
+
+.featured-post-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.featured-post-date {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Styles for other sections */
+.latest-news, .trending-posts, .interview-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Add more specific styles for other sections as needed */
