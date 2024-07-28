@@ -1,0 +1,40 @@
+<article class="sidebar-post-card post-card">
+                            <a href="{{url}}">
+                            {{#if feature_image}}
+                                <div class="sidebar-post-card-image-link post-card-image-link">
+                                    <img class="sidebar-post-card-image post-card-image"
+                                        srcset="{{img_url feature_image size="s"}} 300w,
+                                                {{img_url feature_image size="m"}} 600w,
+                                                {{img_url feature_image size="l"}} 1000w,
+                                                {{img_url feature_image size="xl"}} 2000w"
+                                        sizes="(max-width: 1000px) 400px, 800px"
+                                        src="{{img_url feature_image size="m"}}"
+                                        alt="{{title}}"
+                                    />
+                                </div>
+                            {{/if}}
+                            
+                            <div class="sidebar-post-card-content post-card-content">
+                                <h2 class="sidebar-post-card-title post-card-title">{{title}}</h2>
+                                <time class="sidebar-post-card-date post-card-date" datetime="{{date format="YYYY-MM-DD"}}">
+                                    {{date format="MMMM DD, YYYY"}}
+                                </time>
+                            </div>
+                            </a>
+                        </article>
+<!--
+    <article class="sidebar-post-card">
+    <a href="{{url}}">
+        {{#if feature_image}}
+            <img class="sidebar-post-image"
+                src="{{img_url feature_image size="s"}}"
+                alt="{{title}}"
+            />
+        {{/if}}
+        <div class="sidebar-post-content">
+            <h2 class="sidebar-post-title">{{title}}</h2>
+            <time class="sidebar-post-date" datetime="{{date format="YYYY-MM-DD"}}">
+                {{date format="MMMM DD, YYYY"}}
+            </time>
+        </div>
+    </a> -->

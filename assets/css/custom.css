@@ -9,7 +9,7 @@
 }
 
 .featured-post-image {
-    width: 70%;
+    width: 90%;
     height: 60vh; /* Adjust this value to control the height */
     overflow: hidden;
 }
@@ -42,3 +42,55 @@
     margin-bottom: 40px;
 }
 
+.content-layout {
+    display: flex;
+    gap: 2rem;
+}
+
+.main-content {
+    flex: 2;
+}
+
+.sidebar {
+    flex: 1;
+}
+
+.latest-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-post-card {
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 500px;
+}
+
+.sidebar-post-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.sidebar-post-title {
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+
+.sidebar-post-date {
+    font-size: 0.8rem;
+    display: block;
+    margin: 0 0.5rem 0.5rem;
+}
+.hero {
+    outline: 2px solid red;
+    display: flex;
+    flex-direction: row;
+}
+.side {
+    width: 30%;
+}
