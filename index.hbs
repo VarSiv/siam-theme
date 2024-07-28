@@ -33,10 +33,33 @@ into the {body} of the default.hbs template --}}
      {{!-- Economia Section --}}
         <section class="category-section">
             <h2>Economia</h2>
-            <div class="post-grid">
+            <div class="post-feed">
                 {{#get "posts" filter="tag:economia" limit="3" order="published_at DESC"}}
                     {{#foreach posts}}
-                        {{> "post-card"}}
+                        <article class="post-card">
+                            <a class="post-card-image-link" href="{{url}}">
+                            {{#if feature_image}}
+                                <div class="post-card-image-link">
+                                    <img class="post-card-image"
+                                        srcset="{{img_url feature_image size="s"}} 300w,
+                                                {{img_url feature_image size="m"}} 600w,
+                                                {{img_url feature_image size="l"}} 1000w,
+                                                {{img_url feature_image size="xl"}} 2000w"
+                                        sizes="(max-width: 1000px) 400px, 800px"
+                                        src="{{img_url feature_image size="m"}}"
+                                        alt="{{title}}"
+                                    />
+                                </div>
+                            {{/if}}
+                            
+                            <div class="post-card-content">
+                                <h2 class="post-card-title">{{title}}</h2>
+                                <time class="post-card-date" datetime="{{date format="YYYY-MM-DD"}}">
+                                    {{date format="MMMM DD, YYYY"}}
+                                </time>
+                            </div>
+                            </a>
+                        </article>
                     {{/foreach}}
                 {{/get}}
             </div>
@@ -45,10 +68,33 @@ into the {body} of the default.hbs template --}}
         {{!-- Politica Section --}}
         <section class="category-section">
             <h2>Politica</h2>
-            <div class="post-grid">
+            <div class="post-feed">
                 {{#get "posts" filter="tag:politica" limit="3" order="published_at DESC"}}
                     {{#foreach posts}}
-                        {{> "post-card"}}
+                        <article class="post-card">
+                            <a class="post-card-image-link" href="{{url}}">
+                            {{#if feature_image}}
+                                <div class="post-card-image-link">
+                                    <img class="post-card-image"
+                                        srcset="{{img_url feature_image size="s"}} 300w,
+                                                {{img_url feature_image size="m"}} 600w,
+                                                {{img_url feature_image size="l"}} 1000w,
+                                                {{img_url feature_image size="xl"}} 2000w"
+                                        sizes="(max-width: 1000px) 400px, 800px"
+                                        src="{{img_url feature_image size="m"}}"
+                                        alt="{{title}}"
+                                    />
+                                </div>
+                            {{/if}}
+                            
+                            <div class="post-card-content">
+                                <h2 class="post-card-title">{{title}}</h2>
+                                <time class="post-card-date" datetime="{{date format="YYYY-MM-DD"}}">
+                                    {{date format="MMMM DD, YYYY"}}
+                                </time>
+                            </div>
+                            </a>
+                        </article>
                     {{/foreach}}
                 {{/get}}
             </div>
@@ -57,10 +103,33 @@ into the {body} of the default.hbs template --}}
         {{!-- Sociedad Section --}}
         <section class="category-section">
             <h2>Sociedad</h2>
-            <div class="post-grid">
+            <div class="post-feed">
                 {{#get "posts" filter="tag:sociedad" limit="3" order="published_at DESC"}}
                     {{#foreach posts}}
-                        {{> "post-card"}}
+                        <article class="post-card">
+                            <a class="post-card-image-link" href="{{url}}">
+                            {{#if feature_image}}
+                                <div class="post-card-image-link">
+                                    <img class="post-card-image"
+                                        srcset="{{img_url feature_image size="s"}} 300w,
+                                                {{img_url feature_image size="m"}} 600w,
+                                                {{img_url feature_image size="l"}} 1000w,
+                                                {{img_url feature_image size="xl"}} 2000w"
+                                        sizes="(max-width: 1000px) 400px, 800px"
+                                        src="{{img_url feature_image size="m"}}"
+                                        alt="{{title}}"
+                                    />
+                                </div>
+                            {{/if}}
+                            
+                            <div class="post-card-content">
+                                <h2 class="post-card-title">{{title}}</h2>
+                                <time class="post-card-date" datetime="{{date format="YYYY-MM-DD"}}">
+                                    {{date format="MMMM DD, YYYY"}}
+                                </time>
+                            </div>
+                            </a>
+                        </article>
                     {{/foreach}}
                 {{/get}}
             </div>

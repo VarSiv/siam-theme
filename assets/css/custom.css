@@ -1,5 +1,5 @@
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -42,4 +42,3 @@
     margin-bottom: 40px;
 }
 
-/* Add more specific styles for other sections as needed */
