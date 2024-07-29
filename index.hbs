@@ -13,21 +13,7 @@ into the {body} of the default.hbs template --}}
         {{!-- Featured (Most Recent) Post --}}
         {{#get "posts" limit="1" as |featured|}}
             {{#foreach featured}}
-            <article class="featured-post">
-                <a href="{{url}}" class="featured-post-link">
-                {{#if feature_image}}
-                <div class="featured-post-image">
-                    <img src="{{img_url feature_image}}" alt="{{title}}">
-                </div>
-                {{/if}}
-                <div class="featured-post-content">
-                    <h1 class="featured-post-title">{{title}}</h1>
-                    <time class="featured-post-date" datetime="{{date format="YYYY-MM-DD"}}">
-                        {{date format="MMMM DD, YYYY"}}
-                    </time>
-                </div>
-                </a>
-            </article>
+                {{> "post-card-big"}}
             {{/foreach}}
         {{/get}}
         </div>
