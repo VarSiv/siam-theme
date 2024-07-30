@@ -97,5 +97,27 @@
     align-content: center;
 }
 .sidebar-post-card-image-link {
+    margin-bottom: 0px;
+}
+.clap-button{
+    padding-top: 20px;
+}
+.clap{
+    margin: auto;
+}
+.post-card-date{
+    color:#666;
+    font-size: medium;
+}
+.featured-title {
+    font-size: xx-large;
+}
+.post-card-image-link {
+    margin-bottom: 10px;
+}
+.sidebar-post-card-image-link{
     margin-bottom: 6px;
+}
+.post-feed {
+    padding-top: 0;
 }

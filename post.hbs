@@ -86,6 +86,12 @@ into the {body} tag of the default.hbs template --}}
         {{content}}
     </section>
 
+    <div class="clap-button">
+
+        <applause-button class="clap" style="width: 58px; height: 58px;"/>
+
+    </div>
+
     {{#if comments}}
         <section class="article-comments gh-canvas">
             {{comments}}
@@ -113,7 +119,6 @@ into the {body} tag of the default.hbs template --}}
 {{/unless}}
 {{/unless}}
 {{/if}}
-<applause-button style="width: 58px; height: 58px;"/>
 
 {{!-- Read more links, just above the footer --}}
 {{#if @custom.show_recent_posts_footer}}

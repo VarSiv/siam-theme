@@ -888,6 +888,7 @@ production stylesheet in assets/built/screen.css
     overflow: hidden;
     display: block;
     margin-bottom: 0px;
+    outline: 1px solid red;
 }
 
 
@@ -1135,7 +1136,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 
     .post-card-full .post-card-image-link {
-        margin-bottom: 10px;
+        margin-bottom: 6px;
     }
 
     .post-card-full .post-card-tags {
