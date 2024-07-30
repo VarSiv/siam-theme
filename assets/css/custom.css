@@ -111,6 +111,7 @@
 }
 .featured-title {
     font-size: xx-large;
+    font-weight: 700;
 }
 .post-card-image-link {
     margin-bottom: 10px;
@@ -118,6 +119,23 @@
 .sidebar-post-card-image-link{
     margin-bottom: 6px;
 }
+.sidebar-post-card-title {
+    font-size: 24px
+
+}
 .post-feed {
     padding-top: 0;
+}
+.category-heading {
+    font-size: xx-large;
+    
+    font-weight: 700;
+}
+.sidebar-post-card-date{
+    font-size: 14px;
+}
+.tag-title, .authors-title {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 44px;
 }

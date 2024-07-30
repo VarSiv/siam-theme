@@ -858,7 +858,7 @@ production stylesheet in assets/built/screen.css
 }
 
 :is(.tag-template, .author-template) .post-feed {
-    margin-top: 4vmin;
+    margin-top: 1vmin;
 }
 
 @media (max-width: 991px) {
