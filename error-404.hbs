@@ -29,7 +29,7 @@ were looking for, let's give them some alternative stuff to read. --}}
         {{#get "posts" include="authors" limit="3" as |more_posts|}}
             {{#if more_posts}}
                 {{#foreach more_posts}}
-                    {{> "post-card"}}
+                    {{> "sidebar-post-card"}}
                 {{/foreach}}
             {{/if}}
         {{/get}}
