@@ -32,7 +32,7 @@ ul.sub-menu {
 .has_dropdown:hover ul.sub-menu,
 ul.sub-menu:hover {
     visibility: visible !important;
-    opacity: 0.5 !important;
+    opacity: 1 !important;
     top: calc(100% + 20px) !important;
 }
 
