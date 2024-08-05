@@ -7,80 +7,87 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
-    <div class="container">
-    <div class="hero">
-        <div class="main">
-        {{!-- Featured (Most Recent) Post --}}
-        {{#get "posts" limit="1" as |featured|}}
-            {{#foreach featured}}
-                {{> "post-card-big"}}
-            {{/foreach}}
-        {{/get}}
-        </div>
-        <div class="side">
-    <aside class="sidebar">
-        <h2>Últimos</h2>
-        <div class="latest-posts">
-            {{#get "posts" filter="tag:economia" limit="1" include="tags" order="published_at DESC"}}
-                {{#foreach posts}}
-                        {{> "sidebar-post-card"}}
-                    {{/foreach}}
-            {{/get}}
-            
-            {{#get "posts" filter="tag:politica" limit="1" include="tags" order="published_at DESC"}}
-                {{#foreach posts}}
-                        {{> "sidebar-post-card"}}
-                    {{/foreach}}
-            {{/get}}
-            
-            {{#get "posts" filter="tag:sociedad" limit="1" include="tags" order="published_at DESC"}}
-                {{#foreach posts}}
-                        {{> "sidebar-post-card"}}
-                    {{/foreach}}
-            {{/get}}
-        </div>
-    </aside>
+<div class="wrapper">
+
+    <div class="col2">
+            <div class="side">
+            <aside class="sidebar">
+                <h2>Últimos</h2>
+                <div class="latest-posts">
+                    {{#get "posts" filter="tag:economia" limit="1" include="tags" order="published_at DESC"}}
+                        {{#foreach posts}}
+                                {{> "sidebar-post-card"}}
+                            {{/foreach}}
+                    {{/get}}
+                    
+                    {{#get "posts" filter="tag:politica" limit="1" include="tags" order="published_at DESC"}}
+                        {{#foreach posts}}
+                                {{> "sidebar-post-card"}}
+                            {{/foreach}}
+                    {{/get}}
+                    
+                    {{#get "posts" filter="tag:sociedad" limit="1" include="tags" order="published_at DESC"}}
+                        {{#foreach posts}}
+                                {{> "sidebar-post-card"}}
+                            {{/foreach}}
+                    {{/get}}
+                </div>
+            </aside>
+            </div>
     </div>
+
+    <div class="col1">
+                <div class="main ">
+                    {{!-- Featured (Most Recent) Post --}}
+                    {{#get "posts" limit="1" as |featured|}}
+                        {{#foreach featured}}
+                            {{> "post-card-big"}}
+                        {{/foreach}}
+                    {{/get}}
+                </div>
+
+            <div class="inner posts">
+
+                    {{!-- Economia Section --}}
+                    <section class="category-section ">
+                        <a href = "https://www.siamrevista.com/tag/economia/"><h2 class="category-heading">Economia</h2></a>
+                        <div class="post-feed post-feed-category">
+                            {{#get "posts" filter="tag:economia" limit="2" order="published_at DESC"}}
+                                {{#foreach posts}}
+                                    {{> "category-post-card"}}
+                                {{/foreach}}
+                            {{/get}}
+                        </div>
+                    </section>
+
+                    {{!-- Politica Section --}}
+                    <section class="category-section">
+                        <a href = "https://www.siamrevista.com/tag/politica/"><h2 class="category-heading">Politica</h2></a>
+                        <div class="post-feed post-feed-category">
+                            {{#get "posts" filter="tag:politica" limit="2" order="published_at DESC"}}
+                                {{#foreach posts}}
+                                    {{> "category-post-card"}}
+                                {{/foreach}}
+                            {{/get}}
+                        </div>
+                    </section>
+
+                    {{!-- Sociedad Section --}}
+                    <section class="category-section ">
+                        <a href = "https://www.siamrevista.com/tag/sociedad/"><h2 class="category-heading">Sociedad</h2></a>
+                        <div class="post-feed post-feed-category">
+                            {{#get "posts" filter="tag:sociedad" limit="2" order="published_at DESC"}}
+                                {{#foreach posts}}
+                                    {{> "category-post-card"}}
+                                {{/foreach}}
+                            {{/get}}
+                        </div>
+                    </section>
+
+            {{pagination}}
+
+            </div>
     </div>
-<div class="inner posts">
-
-     {{!-- Economia Section --}}
-        <section class="category-section">
-            <a href = "https://www.siamrevista.com/economia/"><h2 class="category-heading">Economia</h2></a>
-            <div class="post-feed">
-                {{#get "posts" filter="tag:economia" limit="3" order="published_at DESC"}}
-                    {{#foreach posts}}
-                        {{> "category-post-card"}}
-                    {{/foreach}}
-                {{/get}}
-            </div>
-        </section>
-
-        {{!-- Politica Section --}}
-        <section class="category-section">
-            <a href = "https://www.siamrevista.com/politica/"><h2 class="category-heading">Politica</h2></a>
-            <div class="post-feed">
-                {{#get "posts" filter="tag:politica" limit="3" order="published_at DESC"}}
-                    {{#foreach posts}}
-                        {{> "category-post-card"}}
-                    {{/foreach}}
-                {{/get}}
-            </div>
-        </section>
-
-        {{!-- Sociedad Section --}}
-        <section class="category-section">
-            <a href = "https://www.siamrevista.com/sociedad/"><h2 class="category-heading">Sociedad</h2></a>
-            <div class="post-feed">
-                {{#get "posts" filter="tag:sociedad" limit="3" order="published_at DESC"}}
-                    {{#foreach posts}}
-                        {{> "category-post-card"}}
-                    {{/foreach}}
-                {{/get}}
-            </div>
-        </section>
-
-    {{pagination}}
-
+</div>
 </div>
 </main>
