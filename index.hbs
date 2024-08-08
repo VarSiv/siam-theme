@@ -83,6 +83,17 @@ into the {body} of the default.hbs template --}}
                             {{/get}}
                         </div>
                     </section>
+                    {{!-- Deporrtes Section --}}
+                    <section class="category-section ">
+                        <a href = "https://www.siamrevista.com/tag/deporte/"><h2 class="category-heading">Deportes</h2></a>
+                        <div class="post-feed post-feed-category">
+                            {{#get "posts" filter="tag:deporte" limit="2" order="published_at DESC"}}
+                                {{#foreach posts}}
+                                    {{> "category-post-card"}}
+                                {{/foreach}}
+                            {{/get}}
+                        </div>
+                    </section>
 
             {{pagination}}
 
