@@ -201,3 +201,80 @@
         grid-template-columns: 1fr; /* Change to a single column on mobile */
     }
 }
+.site-footer {
+    padding: 50px 0;
+    background-color: #000000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.footer-left {
+    justify-content: flex-start; /* Aligns items to the start of the container */
+}
+
+.footer-left p {
+    margin: 0;
+    margin-right: 20px; /* Adds space between the copyright text and the "Subscribite" link */
+}
+
+.footer-center {
+    justify-content: center;
+}
+
+.footer-logo {
+    max-height: 75px;
+    width: auto;
+}
+
+.footer-right {
+    justify-content: flex-end;
+}
+
+.footer-nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        margin-bottom: 15px;
+        justify-content: center;
+    }
+
+    .footer-left {
+        flex-direction: column;
+    }
+
+    .footer-left p {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .footer-nav a {
+        margin: 0 10px;
+    }
+}
