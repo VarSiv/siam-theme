@@ -1,3 +1,9 @@
-node_modules
-dist
-assets/built
+node_modules/
+dist/
+assets/built/
+.DS_Store
+.DS_Store
+assets/css/custom.css
+assets/.DS_Store
+assets/built/screen.css.map
+assets/built/casper.js

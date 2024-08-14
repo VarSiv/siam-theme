@@ -16,9 +16,14 @@
                             
                             <div class="sidebar-post-card-content post-card-content">
                                 <h2 class="sidebar-post-card-title post-card-title">{{title}}</h2>
-                                <time class="sidebar-post-card-date post-card-date" datetime="{{date format="YYYY-MM-DD"}}">
-                                    {{date format="MMMM DD, YYYY"}}
-                                </time>
+                                <div class="sidebar-details">
+                                    <p class="sidebar-post-author">
+                                            {{authors}}
+                                        </p>
+                                    <time class="sidebar-post-card-date post-card-date" datetime="{{date format="YYYY-MM-DD"}}">
+                                        {{date format="MMMM DD, YYYY"}}
+                                    </time>
+                                </div>
                             </div>
                             </a>
                         </article>

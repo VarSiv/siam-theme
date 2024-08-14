@@ -19,9 +19,15 @@
             <h1 class="post-card-title featured-title">{{title}}</h1>
         </a>
         <footer class="post-card-meta">
-            <time class="post-card-date" datetime="{{date format="YYYY-MM-DD"}}">
-                {{date format="MMMM DD, YYYY"}}
-            </time>
+           <div class="category-details">
+                <p class="category-post-author">
+                    {{authors}}
+                </p>
+                <time class="post-card-date" datetime="{{date format="YYYY-MM-DD"}}">
+                    {{date format="MMMM DD, YYYY"}}
+                </time>
+                
+            </div>
         </footer>
     </div>
 </article>

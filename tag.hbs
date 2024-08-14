@@ -24,9 +24,15 @@
           
           <div class="post-card-content">
             <h2 class="post-card-title">{{title}}</h2>
-            <time class="post-card-date" datetime="{{date format="YYYY-MM-DD"}}">
-              {{date format="MMMM DD, YYYY"}}
-            </time>
+            <div class="category-details">
+              <p class="category-post-author">
+                  {{authors}}
+              </p>
+              <time class="post-card-date" datetime="{{date format="YYYY-MM-DD"}}">
+                  {{date format="MMMM DD, YYYY"}}
+              </time>
+              
+          </div>
           </div>
           </a>
         </article>

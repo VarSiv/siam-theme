@@ -14,19 +14,19 @@ into the {body} of the default.hbs template --}}
             <aside class="sidebar">
                 <h2>Últimos</h2>
                 <div class="latest-posts">
-                    {{#get "posts" filter="tag:economia" limit="1" include="tags" order="published_at DESC"}}
+                    {{#get "posts" include="authors" filter="tag:economia" limit="1" include="tags" order="published_at DESC"}}
                         {{#foreach posts}}
                                 {{> "sidebar-post-card"}}
                             {{/foreach}}
                     {{/get}}
                     
-                    {{#get "posts" filter="tag:politica" limit="1" include="tags" order="published_at DESC"}}
+                    {{#get "posts" include="authors" filter="tag:politica" limit="1" include="tags" order="published_at DESC"}}
                         {{#foreach posts}}
                                 {{> "sidebar-post-card"}}
                             {{/foreach}}
                     {{/get}}
                     
-                    {{#get "posts" filter="tag:sociedad" limit="1" include="tags" order="published_at DESC"}}
+                    {{#get "posts" include="authors" filter="tag:sociedad" limit="1" include="tags" order="published_at DESC"}}
                         {{#foreach posts}}
                                 {{> "sidebar-post-card"}}
                             {{/foreach}}
@@ -39,7 +39,7 @@ into the {body} of the default.hbs template --}}
     <div class="col1">
                 <div class="main ">
                     {{!-- Featured (Most Recent) Post --}}
-                    {{#get "posts" limit="1" as |featured|}}
+                    {{#get "posts" include="authors"limit="1" as |featured|}}
                         {{#foreach featured}}
                             {{> "post-card-big"}}
                         {{/foreach}}
@@ -52,7 +52,7 @@ into the {body} of the default.hbs template --}}
                     <section class="category-section ">
                         <a href = "https://www.siamrevista.com/tag/economia/"><h2 class="category-heading">Economia</h2></a>
                         <div class="post-feed post-feed-category">
-                            {{#get "posts" filter="tag:economia" limit="2" order="published_at DESC"}}
+                            {{#get "posts" filter="tag:economia" limit="2" order="published_at DESC" include="authors"}}
                                 {{#foreach posts}}
                                     {{> "category-post-card"}}
                                 {{/foreach}}
@@ -64,7 +64,7 @@ into the {body} of the default.hbs template --}}
                     <section class="category-section">
                         <a href = "https://www.siamrevista.com/tag/politica/"><h2 class="category-heading">Politica</h2></a>
                         <div class="post-feed post-feed-category">
-                            {{#get "posts" filter="tag:politica" limit="2" order="published_at DESC"}}
+                            {{#get "posts" filter="tag:politica" limit="2" order="published_at DESC" include="authors"}}
                                 {{#foreach posts}}
                                     {{> "category-post-card"}}
                                 {{/foreach}}
@@ -76,7 +76,7 @@ into the {body} of the default.hbs template --}}
                     <section class="category-section ">
                         <a href = "https://www.siamrevista.com/tag/sociedad/"><h2 class="category-heading">Sociedad</h2></a>
                         <div class="post-feed post-feed-category">
-                            {{#get "posts" filter="tag:sociedad" limit="2" order="published_at DESC"}}
+                            {{#get "posts" filter="tag:sociedad" limit="2" order="published_at DESC" include="authors"}}
                                 {{#foreach posts}}
                                     {{> "category-post-card"}}
                                 {{/foreach}}
@@ -87,7 +87,7 @@ into the {body} of the default.hbs template --}}
                     <section class="category-section ">
                         <a href = "https://www.siamrevista.com/tag/deporte/"><h2 class="category-heading">Deportes</h2></a>
                         <div class="post-feed post-feed-category">
-                            {{#get "posts" filter="tag:deporte" limit="2" order="published_at DESC"}}
+                            {{#get "posts" filter="tag:deporte" limit="2" order="published_at DESC" include="authors"}}
                                 {{#foreach posts}}
                                     {{> "category-post-card"}}
                                 {{/foreach}}
