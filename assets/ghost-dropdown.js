@@ -1,4 +1,3 @@
-
 "use strict";
 
 const init = {
@@ -7,7 +6,6 @@ const init = {
             targetElement = 'ul',
             hasDropdownDetectText = '[has_dropdown]',
             subitemDetectText = '[subitem]',
-            hasDropdownIcon = "<svg width='19' height='10' viewBox='0 0 19 10' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1.74805 1.52002L9.54883 9.00002L17.3496 1.52002' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>",
             hasDropdownClasses = 'has_dropdown',
             submenuUlClasses = 'sub-menu'
         } = config;
@@ -19,7 +17,7 @@ const init = {
             const link = li.querySelector('a');
             if (link.textContent.includes(hasDropdownDetectText)) {
                 li.classList.add(hasDropdownClasses);
-                link.innerHTML = `${link.textContent.replace(hasDropdownDetectText, '')}<span>${hasDropdownIcon}</span>`;
+                link.textContent = link.textContent.replace(hasDropdownDetectText, '');
                 const subItems = [];
                 let nextSibling = li.nextElementSibling;
                 while (nextSibling !== null && nextSibling.querySelector('a').textContent.includes(subitemDetectText)) {
@@ -41,7 +39,6 @@ const init = {
     }
 };
 
-
 // Initialize
 init.ghostDropdown({
     targetElement: '.ghost-dropdown-menu',
@@ -50,4 +47,3 @@ init.ghostDropdown({
     subitemDetectText: '[subitem]',
     submenuUlClasses: 'sub-menu'
 });
-

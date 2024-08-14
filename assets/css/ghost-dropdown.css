@@ -1,16 +1,11 @@
 .has_dropdown {
     position: relative;
-    padding-right: 25px !important;
+    padding-right: 0px !important;
     display: inline-block;
     padding-bottom: 20px;
 }
 
-.has_dropdown svg {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
+
 
 ul.sub-menu {
     background: #79b1d1;
