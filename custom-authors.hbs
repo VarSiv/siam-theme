@@ -8,16 +8,24 @@
             </header>
 
             <section class="post-full-content">
-
-
                 <div class="authors-list">
                     {{#get "authors" limit="all" include="count.posts" order="count.posts desc"}}
                         {{#foreach authors}}
                             <div class="author-item">
+                                
+                                <div class="profile-image">
+                                    {{#if profile_image}}
+                                        <img src="{{profile_image}}" alt="{{name}}'s profile picture" class="author-image">
+                                    {{else}}
+                                        <img src="{{asset "images/defaultpfp.jpg"}}" alt="Default profile picture" class="author-image">
+                                    {{/if}}
+                                </div> 
                                 <a href="{{url}}" class="author-link">
                                     <h2 class="author-name">{{name}}</h2>
-                                    <p class="author-meta">{{count.posts}} posts</p>
                                 </a>
+                                <a href="{{url}}" class="author-link">
+                                    <p class="author-meta">{{count.posts}} posts</p>
+                                </a>                                    
                             </div>
                         {{/foreach}}
                     {{/get}}

@@ -307,3 +307,24 @@
 .category-post-author a{
     color: #666 !important;
 }
+.author-image {
+
+    width: 50px;
+}
+.author-item{
+
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 16px;
+}
+.author-name {
+    margin:0;
+    padding-top: 8px;
+}
+.author-meta {
+    padding-top: 14px;
+}
+.authors-list {
+    margin-top: 50px;
+}
