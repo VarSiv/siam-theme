@@ -608,13 +608,7 @@ production stylesheet in assets/built/screen.css
     background: #fff;
 }
 
-@media (max-width: 767px) {
-    .gh-head-members {
-        flex-direction: column-reverse;
-        gap: 16px;
-        width: 100%;
-    }
-}
+
 
 
 /* Search
@@ -645,205 +639,14 @@ production stylesheet in assets/built/screen.css
     margin-right: -4px;
 }
 
-@media (max-width: 767px) {
-    .gh-head-actions .gh-search {
-        display: none;
-    }
-}
 
-@media (min-width: 768px) {
-    .gh-head-brand .gh-search {
-        display: none;
-    }
-}
+
+
 
 
 /* Mobile Menu Trigger
 /* ---------------------------------------------------------- */
 
-.gh-burger {
-    position: relative;
-    display: none;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    margin-right: -3px;
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
-    appearance: none;
-}
-
-.gh-burger::before,
-.gh-burger::after {
-    position: absolute;
-    left: 3px;
-    width: 24px;
-    height: 1px;
-    content: "";
-    background-color: var(--color-darkgrey);
-    transition: all 0.2s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
-}
-
-.has-cover .gh-burger::before,
-.has-cover .gh-burger::after {
-    background-color: #fff;
-}
-
-.gh-burger::before {
-    top: 11px;
-}
-
-.gh-burger::after {
-    bottom: 11px;
-}
-
-.gh-head-open .gh-burger::before {
-    top: 15px;
-    transform: rotate(45deg);
-}
-
-.gh-head-open .gh-burger::after {
-    bottom: 14px;
-    transform: rotate(-45deg);
-}
-
-
-/* Mobile Menu
-/* ---------------------------------------------------------- */
-/* IDs needed to ensure sufficient specificity */
-
-@media (max-width: 767px) {
-    #gh-head {
-        height: 64px;
-    }
-
-    #gh-head .gh-head-inner {
-        grid-template-rows: auto 1fr auto;
-        grid-template-columns: 1fr;
-        gap: 48px;
-    }
-
-    #gh-head .gh-head-brand {
-        display: grid;
-        grid-template-columns: 1fr auto auto;
-        grid-column-start: 1;
-        align-items: center;
-        height: 64px;
-    }
-
-    #gh-head .gh-head-logo {
-        font-size: 2.2rem;
-    }
-
-    #gh-head .gh-head-brand .gh-search {
-        margin-left: -6px;
-    }
-
-    #gh-head .gh-burger {
-        display: block;
-    }
-
-    #gh-head .gh-head-menu,
-    #gh-head .gh-head-actions {
-        position: fixed;
-        justify-content: center;
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    #gh-head .gh-head-menu {
-        margin: 0;
-        transition: none;
-        transform: translateY(0);
-    }
-
-    #gh-head .nav {
-        gap: 16px;
-        align-items: center;
-        line-height: 1.4;
-    }
-
-    #gh-head .nav a {
-        font-size: 2.6rem;
-        font-weight: 600;
-        text-transform: none;
-    }
-
-    #gh-head .nav li {
-        opacity: 0;
-        transform: translateY(-4px);
-    }
-
-    #gh-head :is(.gh-head-button, .gh-head-link) {
-        opacity: 0;
-        transform: translateY(8px);
-    }
-
-    #gh-head .gh-head-button {
-        width: 100%;
-        font-size: 1.8rem;
-        text-transform: none;
-        opacity: 0;
-        transform: translateY(8px);
-    }
-
-    .gh-head-open #gh-head {
-        position: fixed;
-        inset: 0;
-        z-index: 3999999;
-        height: 100%;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .gh-head-open.has-cover #gh-head,
-    .gh-head-open.has-cover #gh-head .gh-head-actions {
-        background-color: var(--ghost-accent-color);
-    }
-
-    .gh-head-open #gh-head .gh-head-menu,
-    .gh-head-open #gh-head .gh-head-actions {
-        position: static;
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .gh-head-open #gh-head .nav {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .gh-head-open #gh-head .nav li {
-        opacity: 1;
-        transition: transform 0.2s, opacity 0.2s;
-        transform: translateY(0);
-    }
-
-    .gh-head-open #gh-head .gh-head-actions {
-        position: sticky;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: inline-flex;
-        flex-direction: column;
-        gap: 12px;
-        align-items: center;
-        padding: max(4vmin, 20px) 0 max(4vmin, 28px);
-        background-color: #fff;
-    }
-
-    .gh-head-open #gh-head :is(.gh-head-button, .gh-head-link) {
-        opacity: 1;
-        transition: transform 0.4s, opacity 0.4s;
-        transition-delay: 0.2s;
-        transform: translateY(0);
-    }
-
-    .gh-head-open #gh-head .gh-head-link {
-        transition-delay: 0.4s;
-    }
-}
 
 
 /* 5. Post Feed

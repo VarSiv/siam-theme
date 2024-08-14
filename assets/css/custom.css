@@ -3,7 +3,9 @@
     margin: 0 auto;
     padding: 20px;
 }
-
+.nav-container-mobile {
+    display: none;
+}
 .featured-post {
     margin-bottom: 40px;
 }
@@ -327,4 +329,14 @@
 }
 .authors-list {
     margin-top: 50px;
+}
+
+
+@media (max-width: 1000px) {
+    .nav-container {
+        display: none;
+    }
+    .nav-container-mobile{
+        display: revert;
+    }
 }
