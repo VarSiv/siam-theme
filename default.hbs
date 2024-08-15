@@ -36,9 +36,9 @@
         var link = document.getElementById('myLink');
         var header = document.querySelector('.site-header-content');
         var linksContainer = document.querySelector('.links-container');
-
+        var logo = document.querySelector('.mobile-logo-img');
         // Check if we're on the home page
-        var isHomePage = window.location.pathname === '/' || window.location.pathname === '/inex.hbs';
+        var isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.hbs';
 
         if (isHomePage) {
             // Home page specific code
@@ -46,6 +46,8 @@
                 event.preventDefault();
                 header.classList.toggle('expanded');
                 linksContainer.classList.toggle('show');
+                link.classList.toggle('link-expanded-home');
+                logo.classList.toggle('logo-expanded-home');
             });
         } else {
             
@@ -57,6 +59,8 @@
                     event.preventDefault();
                     header_nonhome.classList.toggle('mobile-head-expanded');
                     linksContainer.classList.toggle('show');
+                    link.classList.toggle('link-expanded-nonhome');
+                    logo.classList.toggle('logo-expanded-nonhome');
                 });
 
         }

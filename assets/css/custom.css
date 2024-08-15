@@ -379,10 +379,7 @@ hr {
     align-items: center;
     padding: 0 20px;
     width: 100%;
-}
-
-#myLink {
-    justify-self: start;
+    
 }
 
 .mobile-logo {
@@ -395,8 +392,23 @@ hr {
 .mobile-logo-img {
     max-height: 50px;
     width: auto;
-}
+    transform: translate(0, -100%);
 
+}
+#myLink.link-expanded-home {
+    transform: translate(0, 59%);
+}
+.link-expanded-nonhome img{
+    display: inline-block;
+    position: relative;
+    transform: translate(0%, 210%);
+}
+.mobile-logo-img.logo-expanded-home {
+    transform: translate(0%, 50%);
+}
+.mobile-logo-img.logo-expanded-nonhome {
+    transform: translate(0%, 40%);
+}
 .links-container {
     display: none;
     transition: opacity 0.3s ease;
@@ -404,6 +416,7 @@ hr {
 }
 
 .links-container.show {
+    transform: translate(0, 20px);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -444,9 +457,11 @@ hr {
 }
 
 #myLink {
+    justify-self: start;
     position: relative;
     z-index: 2;
     padding-top: 10px;
+    transform: translate(0, -120%);
 }
 
 .mobile2 {
@@ -459,18 +474,34 @@ hr {
 .mobile2 .mobile-menu-top {
     padding-left: 0;
     position: absolute;
+    transition: opacity 0.3s ease;
+    
 }
+.mobile2 .mobile-menu-top .mobile-logo {
+    transform: translate(-40%, -40%);
 
+}
+.mobile2 .mobile-menu-top .mobile-logo .mobile-logo-image {
+    transform: translate(0, -200%);
+
+}
 .mobile2 .mobile-menu-top #myLink {
     left: -5%;
     top: 0%;
+    transform: translate(0, -170%);
 }
 .mobile2 .links-container {
+    transition: opacity 0.3s ease;
     padding-top: 80px;
     padding-left: 0;
     left: -20%;
     top: 40%;
     transform: translate(-20px, 0);
+    
+}
+.mobile2 .links-container.show {
+    outline: 1px solid red;
+    transition: opacity 0.3s ease;
 }
 .gh-head-menu {
     width: 100%;
