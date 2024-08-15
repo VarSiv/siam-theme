@@ -346,6 +346,7 @@
     gap: 10px;
     padding-top: 20px;
 }
+
 .site-header-content {
     transition: padding 0.3s ease; /* Optional: for smooth transition */
 }
@@ -415,6 +416,13 @@ hr {
     .nav-container-mobile {
         display: block;
     }
+    .mobile-head {
+        height: 250px;
+    }
+    .mobile2 .mobile-menu-top .mobile-logo {
+        left: -20%;
+        top: 0%;
+    }
 }
 
 .nav-container-mobile {
@@ -425,7 +433,7 @@ hr {
 .mobile-logo {
     position: absolute;
     top: 20px;
-    left: 50%;
+    left: 55%;
     transform: translateX(-50%);
     z-index: 1;
 }
@@ -439,4 +447,34 @@ hr {
     position: relative;
     z-index: 2;
     padding-top: 10px;
+}
+
+.mobile2 {
+    position: absolute;
+    width: 100%;
+}
+.mobile-head-expanded {
+    height: 500px;
+} 
+.mobile2 .mobile-menu-top {
+    padding-left: 0;
+    position: absolute;
+}
+
+.mobile2 .mobile-menu-top #myLink {
+    left: -5%;
+    top: 0%;
+}
+.mobile2 .links-container {
+    padding-top: 80px;
+    padding-left: 0;
+    left: -20%;
+    top: 40%;
+    transform: translate(-20px, 0);
+}
+.gh-head-menu {
+    width: 100%;
+}
+.head-inner {
+    width: 100%;
 }
