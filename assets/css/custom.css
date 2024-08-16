@@ -1,3 +1,7 @@
+html, body {
+    overflow-x: hidden;
+}
+
 .container {
     max-width: 1200px; 
     margin: 0 auto;
@@ -337,7 +341,6 @@
 
 .links-container {
     display: none;
-    transition: opacity 0.3s ease;
     padding-left: 20px;
 }
 .links-container.show {
@@ -346,13 +349,8 @@
     gap: 10px;
     padding-top: 20px;
 }
-
-.site-header-content {
-    transition: padding 0.3s ease; /* Optional: for smooth transition */
-}
-
 .site-header-content.expanded {
-    padding-bottom: 310px; 
+    padding-bottom: 400px; 
 } 
 .mobile-item {
     color: white;
@@ -384,39 +382,34 @@ hr {
 
 .mobile-logo {
     grid-column: 2;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    padding-left: 15%;
 }
 
 .mobile-logo-img {
-    max-height: 50px;
+    max-height: 60px;
     width: auto;
     transform: translate(0, -100%);
+    padding-left: 10px;
 
 }
-#myLink.link-expanded-home {
-    transform: translate(0, 59%);
-}
+
 .link-expanded-nonhome img{
     display: inline-block;
     position: relative;
     transform: translate(0%, 210%);
 }
-.mobile-logo-img.logo-expanded-home {
-    transform: translate(0%, 50%);
-}
+
 .mobile-logo-img.logo-expanded-nonhome {
     transform: translate(0%, 40%);
 }
 .links-container {
     display: none;
-    transition: opacity 0.3s ease;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .links-container.show {
-    transform: translate(0, 20px);
+    transform: translate(0, 30px);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -474,11 +467,10 @@ hr {
 .mobile2 .mobile-menu-top {
     padding-left: 0;
     position: absolute;
-    transition: opacity 0.3s ease;
     
 }
 .mobile2 .mobile-menu-top .mobile-logo {
-    transform: translate(-40%, -40%);
+    transform: translate(-80%, -40%);
 
 }
 .mobile2 .mobile-menu-top .mobile-logo .mobile-logo-image {
@@ -486,12 +478,11 @@ hr {
 
 }
 .mobile2 .mobile-menu-top #myLink {
-    left: -5%;
+    left: -10%;
     top: 0%;
     transform: translate(0, -170%);
 }
 .mobile2 .links-container {
-    transition: opacity 0.3s ease;
     padding-top: 80px;
     padding-left: 0;
     left: -20%;
@@ -499,13 +490,26 @@ hr {
     transform: translate(-20px, 0);
     
 }
-.mobile2 .links-container.show {
-    outline: 1px solid red;
-    transition: opacity 0.3s ease;
-}
 .gh-head-menu {
     width: 100%;
 }
 .head-inner {
     width: 100%;
+}
+
+.mobile-menu-top.menu-top-home {
+    height: 0;
+}
+.menu-top-home {
+    transform: translate(40px);
+    position: absolute;
+    left: 0%;
+    top: 60%;
+    padding-top: 10px;
+}
+.link-container-home.show {
+    position: absolute;
+    padding-top: 0px;
+    padding-left: calc(20%+40px);
+    top: -20%;
 }

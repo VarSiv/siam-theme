@@ -37,17 +37,25 @@
         var header = document.querySelector('.site-header-content');
         var linksContainer = document.querySelector('.links-container');
         var logo = document.querySelector('.mobile-logo-img');
+        var menu_top = document.querySelector('.mobile-menu-top');
+        var main_mobile_menu = document.querySelector('.nav-container-mobile');
         // Check if we're on the home page
         var isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.hbs';
 
         if (isHomePage) {
+            menu_top.classList.add('menu-top-home');
+            main_mobile_menu.classList.add('mobile-home');
+            linksContainer.classList.add('link-container-home');
+
             // Home page specific code
             link.addEventListener('click', function(event) {
                 event.preventDefault();
                 header.classList.toggle('expanded');
                 linksContainer.classList.toggle('show');
-                link.classList.toggle('link-expanded-home');
-                logo.classList.toggle('logo-expanded-home');
+                //link.classList.toggle('link-expanded-home');
+                //logo.classList.toggle('logo-expanded-home');
+                //menu_top.classList.toggle('top-expanded-home');
+                //linksContainer.classList.toggle('.link-container-expanded-home');
             });
         } else {
             
