@@ -235,7 +235,8 @@ production stylesheet in assets/built/screen.css
 
 @media (max-width: 767px) {
     .has-cover .site-header-content {
-        min-height: 240px;
+        max-height: 90px;
+        padding-top: 90px;
     }
     .site-header-inner {
         gap: 16px;

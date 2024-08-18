@@ -46,6 +46,7 @@
             menu_top.classList.add('menu-top-home');
             main_mobile_menu.classList.add('mobile-home');
             linksContainer.classList.add('link-container-home');
+            link.classList.add('link-home');
 
             // Home page specific code
             link.addEventListener('click', function(event) {
@@ -61,6 +62,7 @@
             
             // Non-home page specific code
             var header_nonhome = document.querySelector('.mobile-head');
+            main_mobile_menu.classList.add('mobile-nonhome');
             
 
                 link.addEventListener('click', function(event) {

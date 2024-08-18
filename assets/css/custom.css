@@ -423,14 +423,26 @@ hr {
         display: block;
     }
     .mobile-head {
-        height: 250px;
+        height: 90px;
     }
     .mobile2 .mobile-menu-top .mobile-logo {
         left: -20%;
         top: 0%;
     }
 }
-
+.mobile-menu-top{
+    padding-top: 40px;
+}
+.mobile-logo {
+    padding-top: 70px;
+}
+.menu-top-home{
+    padding-top: 60px;
+    margin-top: 10px;
+}
+.link-home {
+    margin-top: 40px;
+}
 .nav-container-mobile {
     position: relative;
     padding-top: 20px;
@@ -510,6 +522,21 @@ hr {
 .link-container-home.show {
     position: absolute;
     padding-top: 0px;
+    margin-top: 50px;
     padding-left: calc(20%+40px);
     top: -20%;
+}
+.link-home {
+    padding-bottom: 5px;
+}
+.mobile-nonhome {
+    position: absolute;
+    top: 38px;
+}
+.mobile-head-expanded .mobile-nonhome .mobile-menu-top{
+    position: absolute;
+    top: -64px;
+}
+.mobile-head-expanded .links-container.show {
+    padding-top: 40px;
 }
