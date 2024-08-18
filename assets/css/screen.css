@@ -42,7 +42,7 @@ production stylesheet in assets/built/screen.css
     --color-border: #e1e1e1;
     --color-wash: #e5eff5;
     --color-darkmode: #151719;
-
+    --dark-blue: #5391b5;
     /*
     An accent color is also set by Ghost itself in
     Ghost Admin > Settings > Brand

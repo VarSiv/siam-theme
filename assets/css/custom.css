@@ -134,8 +134,11 @@ html, body {
 }
 .category-heading {
     font-size: xx-large;
-    
+    color: var(--dark-blue);
     font-weight: 700;
+}
+a:hover {
+    text-decoration: none;
 }
 .sidebar-post-card-date{
     font-size: 14px;
@@ -292,8 +295,6 @@ html, body {
     padding-right: 10px;
     color: #666 !important;
     font-size: 14px;
-
-
 }
 .sidebar-post-author a{
     font-size: 14px;
@@ -302,7 +303,11 @@ html, body {
 
 .category-details {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.post-card-big .category-post-author {
+    align-self: left;
 }
 .category-post-author{
     padding-right: 10px;
