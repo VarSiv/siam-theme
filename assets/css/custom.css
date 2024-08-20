@@ -50,7 +50,8 @@ html, body {
 .latest-posts {
     display: flex;
     flex-direction: column;
-    
+    justify-content: center;
+
     gap: 0.3rem;
     margin: 0;
     padding: 0;
@@ -544,4 +545,11 @@ hr {
 }
 .mobile-head-expanded .links-container.show {
     padding-top: 40px;
+}
+.latest-posts hr {
+    padding: auto;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 5px;
+
 }
