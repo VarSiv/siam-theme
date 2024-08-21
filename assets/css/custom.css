@@ -513,6 +513,10 @@ hr {
 }
 .head-inner {
     width: 100%;
+    padding: auto;
+}
+.head-inner.gh-head-inner {
+    outline: 1px solid blue;
 }
 
 .mobile-menu-top.menu-top-home {
@@ -552,4 +556,20 @@ hr {
     margin: auto;
     margin-bottom: 5px;
 
+}
+
+.post-card-title:hover {
+    color: var(--dark-blue);
+}
+ nav{
+    margin: 0;
+
+}
+.mobile-menu{
+    outline: 1px solid red;
+    margin-right: 0 !important;
+    
+}
+.nav-container {
+    padding: auto;
 }
