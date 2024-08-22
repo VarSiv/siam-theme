@@ -346,218 +346,16 @@ a:hover {
     margin-top: 50px;
 }
 
-.site-header-content .outer {
-    height: 0;
-}
 
-.links-container {
-    display: none;
-    padding-left: 20px;
-}
-.links-container.show {
-    display: flex; /* or flex, depending on your layout needs */
-    flex-direction: column;
-    gap: 10px;
-    padding-top: 20px;
-}
-.site-header-content.expanded {
-    padding-bottom: 400px; 
-} 
-.mobile-item {
-    color: white;
-    font-size: 20px;
-}
-.mobile-item:hover {
-    color: #666;
-}
+
 hr {
     margin: 0;
     margin-top: 5px;
     margin-bottom: 5px;
     max-width: 200px;
 }
-.nav-container-mobile {
-    display: none;
-    padding-top: 20px;
-    width: 100%;
-}
 
-.mobile-menu-top {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    padding: 0 20px;
-    width: 100%;
-    
-}
 
-.mobile-logo {
-    grid-column: 2;
-    align-items: center;
-    padding-left: 15%;
-}
-
-.mobile-logo-img {
-    max-height: 60px;
-    width: auto;
-    transform: translate(0, -100%);
-}
-
-.link-expanded-nonhome img{
-    display: inline-block;
-    position: relative;
-    transform: translate(0%, 210%);
-}
-
-.mobile-logo-img.logo-expanded-nonhome {
-    transform: translate(0%, 40%);
-}
-.links-container {
-    display: none;
-    padding-top: 40px;
-}
-
-.links-container.show {
-    transform: translate(0, 30px);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-@media (max-width: 767px) {
-    .nav-container {
-        display: none;
-    }
-    .nav-container-mobile {
-        display: block;
-    }
-    .mobile-head {
-        height: 90px;
-    }
-    .mobile2 .mobile-menu-top .mobile-logo {
-        left: -20%;
-        top: 0%;
-    }
-}
-.mobile-menu-top{
-    padding-top: 40px;
-}
-.mobile-logo {
-    padding-top: 70px;
-    padding-left: 0;
-}
-.menu-top-home{
-    padding-top: 60px;
-    margin-top: 10px;
-}
-.menu-top-home .mobile-logo {
-    padding-top: 78px;
-}
-.link-home {
-    margin-top: 40px;
-}
-.nav-container-mobile {
-    position: relative;
-    padding-top: 20px;
-}
-
-.mobile-logo {
-    position: absolute;
-    top: 20px;
-    left: 55%;
-    padding-top: 0;
-    transform: translateX(-70%);
-    z-index: 1;
-}
-
-.mobile-logo-img {
-    max-height: 90px;
-    width: auto;
-}
-
-#myLink {
-    justify-self: start;
-    position: relative;
-    z-index: 2;
-    padding-top: 10px;
-    transform: translate(0, -120%);
-}
-
-.mobile2 {
-    position: absolute;
-    width: 100%;
-}
-.mobile-head-expanded {
-    height: 500px;
-} 
-.mobile2 .mobile-menu-top {
-    padding-left: 0;
-    position: absolute;
-    
-}
-.mobile2 .mobile-menu-top .mobile-logo {
-    transform: translate(-80%, -40%);
-
-}
-.mobile2 .mobile-menu-top .mobile-logo .mobile-logo-image {
-    transform: translate(0, -200%);
-
-}
-.mobile2 .mobile-menu-top #myLink {
-    left: -10%;
-    top: 0%;
-    transform: translate(0, -170%);
-}
-.mobile-nonhome #myLink {
-    padding-bottom: 26px;
-}
-.mobile2 .links-container {
-    padding-top: 80px;
-    padding-left: 0;
-    left: -20%;
-    top: 40%;
-    transform: translate(-20px, 0);
-    
-}
-.gh-head-menu {
-    width: 100%;
-}
-.head-inner {
-    width: 100%;
-    padding: auto;
-}
-
-.mobile-menu-top.menu-top-home {
-    height: 0;
-}
-.menu-top-home {
-    transform: translate(40px);
-    position: absolute;
-    left: 0%;
-    top: 60%;
-    padding-top: 10px;
-}
-.link-container-home.show {
-    position: absolute;
-    padding-top: 0px;
-    margin-top: 50px;
-    padding-left: calc(20%+40px);
-    top: -20%;
-}
-.link-home {
-    padding-bottom: 5px;
-}
-.mobile-nonhome {
-    position: absolute;
-    top: 38px;
-}
-.mobile-head-expanded .mobile-nonhome .mobile-menu-top{
-    position: absolute;
-    top: -64px;
-}
-.mobile-head-expanded .links-container.show {
-    padding-top: 40px;
-}
 .latest-posts hr {
     padding: auto;
     width: 100%;
@@ -565,13 +363,8 @@ hr {
     margin-bottom: 5px;
 
 }
-
 .post-card-title:hover {
     color: var(--dark-blue);
-}
- nav{
-    margin: 0;
-
 }
 .mobile-menu{
     margin-right: 0 !important;
@@ -583,9 +376,7 @@ hr {
 .nav-middle img{
     max-height: 70px;
 }
-.mobile-logo img{ 
-    max-height: 60px;
-}
+
 .line-wrap {
     margin-top: 5px;
     margin-bottom: 5px;

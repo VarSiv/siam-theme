@@ -33,7 +33,6 @@
         
         timeElements.forEach(function(el) {
             var dateParts = el.textContent.trim().split(' ');
-            console.log(dateParts[0], dateParts[1], dateParts[2]);
             el.textContent = spanishDate(dateParts[0], dateParts[1], dateParts[2]);
         });
     });

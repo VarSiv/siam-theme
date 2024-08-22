@@ -12,6 +12,7 @@
     {{!-- Preload scripts --}}
     <link rel="preload" as="style" href="{{asset "built/screen.css"}}" />
     <link rel="preload" as="script" href="{{asset "ghost-dropdown.js"}}" />
+    {{!-- <link rel="preload" as="script" href="{{asset "mobile-menu.js"}}" /> --}}
 
     {{!-- Bootstrap --}}
     <meta name="viewport" content= 
@@ -29,53 +30,11 @@
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "built/ghost-dropdown.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "built/custom.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "built/mobile-menu.css"}}" />
+
 
     <link rel="stylesheet" href="{{asset "built/clap-button.css"}}"/>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-        var link = document.getElementById('myLink');
-        var header = document.querySelector('.site-header-content');
-        var linksContainer = document.querySelector('.links-container');
-        var logo = document.querySelector('.mobile-logo-img');
-        var menu_top = document.querySelector('.mobile-menu-top');
-        var main_mobile_menu = document.querySelector('.nav-container-mobile');
-        // Check if we're on the home page
-        var isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.hbs';
 
-        if (isHomePage) {
-            menu_top.classList.add('menu-top-home');
-            main_mobile_menu.classList.add('mobile-home');
-            linksContainer.classList.add('link-container-home');
-            link.classList.add('link-home');
-
-            // Home page specific code
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                header.classList.toggle('expanded');
-                linksContainer.classList.toggle('show');
-                //link.classList.toggle('link-expanded-home');
-                //logo.classList.toggle('logo-expanded-home');
-                //menu_top.classList.toggle('top-expanded-home');
-                //linksContainer.classList.toggle('.link-container-expanded-home');
-            });
-        } else {
-            
-            // Non-home page specific code
-            var header_nonhome = document.querySelector('.mobile-head');
-            main_mobile_menu.classList.add('mobile-nonhome');
-            
-
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    header_nonhome.classList.toggle('mobile-head-expanded');
-                    linksContainer.classList.toggle('show');
-                    link.classList.toggle('link-expanded-nonhome');
-                    logo.classList.toggle('logo-expanded-nonhome');
-                });
-
-        }
-        });
-    </script>
     <script>
         const monthsInSpanish = [
     'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
@@ -136,6 +95,23 @@ function spanishDate(month, day, year) {
 
 </head>
 <body class="{{body_class}} is-head-{{#match @custom.navigation_layout "Logo on cover"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Modern sans-serif"}} has-sans-body{{/match}}{{#if @custom.show_publication_cover}} has-cover{{/if}}">
+    {{!-- <div class="mobile-menu">
+        <div class="off-screen-menu">
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+        </div>
+
+        <nav>
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        </nav>
+    </div> --}}
 <div class="viewport">
 
     <header id="gh-head" class="gh-head outer{{#match @custom.header_style "Hidden"}} is-header-hidden{{/match}} mobile-head ">
