@@ -19,13 +19,13 @@ into the {body} of the default.hbs template --}}
                                 {{> "sidebar-post-card"}}
                             {{/foreach}}
                     {{/get}}
-                    <hr class="latest-divider" color="lightgrey">
+                    <div class="line-wrap"><hr class="latest-divider" color="lightgrey"></div>
                     {{#get "posts" include="authors" filter="tag:politica" limit="1" include="tags" order="published_at DESC"}}
                         {{#foreach posts}}
                                 {{> "sidebar-post-card"}}
                             {{/foreach}}
                     {{/get}}
-                    <hr class="latest-divider" color="lightgrey">
+                    <div class="line-wrap"><hr class="latest-divider" color="lightgrey"></div>
                     {{#get "posts" include="authors" filter="tag:sociedad" limit="1" include="tags" order="published_at DESC"}}
                         {{#foreach posts}}
                                 {{> "sidebar-post-card"}}

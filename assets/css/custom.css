@@ -329,6 +329,7 @@ a:hover {
     flex-direction: row;
     align-content: center;
     gap: 16px;
+    margin-bottom: 10px;
 }
 .author-name {
     margin:0;
@@ -336,6 +337,10 @@ a:hover {
 }
 .author-meta {
     padding-top: 14px;
+}
+.author-bio {
+    max-width: 70%;
+    margin-bottom: 20px;
 }
 .authors-list {
     margin-top: 50px;
@@ -578,6 +583,10 @@ hr {
 .nav-middle img{
     max-height: 70px;
 }
-.mobile-logo img{
+.mobile-logo img{ 
     max-height: 60px;
+}
+.line-wrap {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
