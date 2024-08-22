@@ -396,8 +396,6 @@ hr {
     max-height: 60px;
     width: auto;
     transform: translate(0, -100%);
-    padding-left: 10px;
-
 }
 
 .link-expanded-nonhome img{
@@ -441,10 +439,14 @@ hr {
 }
 .mobile-logo {
     padding-top: 70px;
+    padding-left: 0;
 }
 .menu-top-home{
     padding-top: 60px;
     margin-top: 10px;
+}
+.menu-top-home .mobile-logo {
+    padding-top: 78px;
 }
 .link-home {
     margin-top: 40px;
@@ -458,7 +460,8 @@ hr {
     position: absolute;
     top: 20px;
     left: 55%;
-    transform: translateX(-50%);
+    padding-top: 0;
+    transform: translateX(-70%);
     z-index: 1;
 }
 
@@ -500,6 +503,9 @@ hr {
     top: 0%;
     transform: translate(0, -170%);
 }
+.mobile-nonhome #myLink {
+    padding-bottom: 26px;
+}
 .mobile2 .links-container {
     padding-top: 80px;
     padding-left: 0;
@@ -514,9 +520,6 @@ hr {
 .head-inner {
     width: 100%;
     padding: auto;
-}
-.head-inner.gh-head-inner {
-    outline: 1px solid blue;
 }
 
 .mobile-menu-top.menu-top-home {
@@ -566,10 +569,15 @@ hr {
 
 }
 .mobile-menu{
-    outline: 1px solid red;
     margin-right: 0 !important;
-    
+    transform: translate(40px, 0);
 }
 .nav-container {
     padding: auto;
+}
+.nav-middle img{
+    max-height: 70px;
+}
+.mobile-logo img{
+    max-height: 60px;
 }

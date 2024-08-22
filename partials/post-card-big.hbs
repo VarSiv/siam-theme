@@ -23,9 +23,21 @@
                 <p class="category-post-author">
                     Por {{authors}}
                 </p>
-                <time class="post-card-date" datetime="{{date format="YYYY-MM-DD"}}">
-                    {{date format="MMMM DD, YYYY"}}
-                </time>
+                <time class="sidebar-post-card-date post-card-date" datetime="{{date format="YYYY-MM-DD"}}">
+    {{date format="MMMM DD, YYYY"}}
+</time>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var timeElements = document.querySelectorAll('.post-card-date');
+        
+        timeElements.forEach(function(el) {
+            var dateParts = el.textContent.trim().split(' ');
+            console.log(dateParts[0], dateParts[1], dateParts[2]);
+            el.textContent = spanishDate(dateParts[0], dateParts[1], dateParts[2]);
+        });
+    });
+</script>
                 
             </div>
         </footer>
