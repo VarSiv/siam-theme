@@ -1,37 +1,47 @@
-/* 
-
-
 .off-screen-menu {
-    background-color:  rgb(34, 37, 49);
-    height: 100vh;
-    width: 100%;
+    background-color:  var(--ghost-accent-color);
+    height: 500px;
+    width: 100vw;
     max-width: 450px;
     position: fixed;
-    top: 0;
-    right: -450px;
+    top: 60px;
+    right: -1000px;
     display: flex;
     flex-direction: column;
-    align-items: center;    
-    justify-content: center;
-    text-align: center;
-    font-size: 3rem;
+    align-items: flex-start;    /* Changed: Align items to the left */
+    justify-content: flex-start; /* Changed: Start content from the top */
+    text-align: left; /* Changed: Align text to the left */
+    font-size: 2.5rem; /* Changed: Reduced font size (adjust as needed) */
     transition: .3s ease;
+    padding: 10px; /* Added: Padding for spacing */
+    padding-left: 40px;
 }
+
 .off-screen-menu.active {
-    right: 0;
+    left: -70px;
+}
+
+.off-screen-menu a {
+    color: white;
+    display: block; /* Added: Ensure each link is on a new line */
+    padding: 5px 0; /* Added: Vertical padding between links */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 
-
-
+.off-screen-menu hr {
+    margin: 15px 0; /* Added: Increase space between horizontal lines */
+}
+.off-screen-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 nav {
     padding: 1rem;
     display: flex;
-    background-color: rgb(34, 37, 49);
+    background-color: rgba(0,0,0,0);
 }
-
-
-
 
 .ham-menu {
     height: 50px;
@@ -39,34 +49,48 @@ nav {
     margin-left: auto;
     position: relative;
 }
+
 .ham-menu span {
     height: 5px;
     width: 100%;
-    background-color: #6F86FF;
+    background-color: #ffffff;
     border-radius: 25px;
     position: absolute;
-    left: 50%;
+    left: 0%;
     top: 50%;
     transform: translate(-50%, -50%);
     transition: .3s ease;
 }
+
 .ham-menu span:nth-child(1) {
     top: 25%;
 }
+
 .ham-menu span:nth-child(3) {
     top: 75%;
 }
+
 .ham-menu.active span {
     background-color: white;
 }
+
 .ham-menu.active span:nth-child(1) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
 }
+
 .ham-menu.active span:nth-child(2) {
     opacity: 0;
 }
+
 .ham-menu.active span:nth-child(3) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
-} */
+}
+.mobile-logo {
+    position: absolute;
+    min-width: 90px;
+    left: -60px;
+    top: 5px;
+    transform: translate(calc(50vw - 60px), 0);
+}

@@ -12,7 +12,7 @@
     {{!-- Preload scripts --}}
     <link rel="preload" as="style" href="{{asset "built/screen.css"}}" />
     <link rel="preload" as="script" href="{{asset "ghost-dropdown.js"}}" />
-    {{!-- <link rel="preload" as="script" href="{{asset "mobile-menu.js"}}" /> --}}
+     <link rel="preload" as="script" href="{{asset "mobile-menu.js"}}" />
 
     {{!-- Bootstrap --}}
     <meta name="viewport" content= 
@@ -34,7 +34,15 @@
 
 
     <link rel="stylesheet" href="{{asset "built/clap-button.css"}}"/>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.hbs';
+            var header = document.querySelector('.gh-head-menu');
+            if (!isHomePage) {
+                header.classList.add('header-nonhome');
+            }
+        });
+    </script>
     <script>
         const monthsInSpanish = [
     'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
@@ -95,23 +103,7 @@ function spanishDate(month, day, year) {
 
 </head>
 <body class="{{body_class}} is-head-{{#match @custom.navigation_layout "Logo on cover"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Modern sans-serif"}} has-sans-body{{/match}}{{#if @custom.show_publication_cover}} has-cover{{/if}}">
-    {{!-- <div class="mobile-menu">
-        <div class="off-screen-menu">
-        <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">contact</a></li>
-        </ul>
-        </div>
 
-        <nav>
-        <div class="ham-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        </nav>
-    </div> --}}
 <div class="viewport">
 
     <header id="gh-head" class="gh-head outer{{#match @custom.header_style "Hidden"}} is-header-hidden{{/match}} mobile-head ">
@@ -120,7 +112,7 @@ function spanishDate(month, day, year) {
                 
             </div>
 
-            <nav class="gh-head-menu mobile-menu">
+            <nav class="gh-head-menu ">
                 {{navigation}}
                 {{#unless @site.members_enabled}}
                     {{#match @custom.navigation_layout "Stacked"}}

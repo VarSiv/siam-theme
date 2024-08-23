@@ -7,9 +7,7 @@ html, body {
     margin: 0 auto;
     padding: 20px;
 }
-.nav-container-mobile {
-    display: none;
-}
+
 .featured-post {
     margin-bottom: 40px;
 }
@@ -210,6 +208,17 @@ a:hover {
     .post-feed-category {
         grid-template-columns: 1fr; /* Change to a single column on mobile */
     }
+    .nav-container {
+        display: none;
+    }
+    .header-nonhome {
+        transform: translate(-40px, 0);
+    }
+}
+@media (min-width: 767px){
+    .mobile-menu{
+        display: none;
+    }
 }
 .site-footer {
     padding: 50px 0;
@@ -342,6 +351,11 @@ a:hover {
     max-width: 70%;
     margin-bottom: 20px;
 }
+@media (max-width: 768px){
+    .author-bio{
+        max-width: 100%;
+    }
+}
 .authors-list {
     margin-top: 50px;
 }
@@ -380,4 +394,8 @@ hr {
 .line-wrap {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+ul.sub-menu::before {
+    color: var(--ghost-accent-color);
+    background-color: var(--ghost-accent-color);
 }
