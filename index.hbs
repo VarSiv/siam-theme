@@ -12,7 +12,7 @@ into the {body} of the default.hbs template --}}
     <div class="col2">
             <div class="side">
             <aside class="sidebar">
-                <h2>Últimos</h2>
+                <h2 class="latest-heading">Últimos</h2>
                 <div class="latest-posts">
                     {{#get "posts" include="authors" filter="tag:economia" limit="1" include="tags" order="published_at DESC"}}
                         {{#foreach posts}}

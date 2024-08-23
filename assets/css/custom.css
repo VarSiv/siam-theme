@@ -136,6 +136,9 @@ html, body {
     color: var(--dark-blue);
     font-weight: 700;
 }
+.latest-heading{
+    color: var(--dark-blue);
+}
 a:hover {
     text-decoration: none;
 }
@@ -219,6 +222,9 @@ a:hover {
     .mobile-menu{
         display: none;
     }
+    .header-home{
+        margin-right: 0;
+    }
 }
 .site-footer {
     padding: 50px 0;
@@ -295,6 +301,9 @@ a:hover {
 
     .footer-nav a {
         margin: 0 10px;
+    }
+    .header-home {
+        transform: translate(-40px,0);
     }
 }
 .sidebar-details {
