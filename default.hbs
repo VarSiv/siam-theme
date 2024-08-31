@@ -4,6 +4,7 @@
 
     {{!-- Basic meta - advanced meta is output with {ghost_head} below --}}
     <title>{{meta_title}}</title>
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="HandheldFriendly" content="True" />
@@ -31,8 +32,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset "built/ghost-dropdown.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "built/custom.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "built/mobile-menu.css"}}" />
-
-
+<meta name="msapplication-TileImage" content="{{asset "favicon.png"}}" />
+<link rel="shortcut icon" type="image/x-icon" href="{{asset "favicon.ico"}}" />
+<link rel="icon" type="image/png" href="{{asset "favicon.png"}}" />
     <link rel="stylesheet" href="{{asset "built/clap-button.css"}}"/>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -56,48 +58,8 @@ function spanishDate(month, day, year) {
     // Ensure month is 0-indexed (0-11)
     var spanishMonth;
     var spanishDay = day.slice(0, -1);
-    if(month==="January"){
-        spanishMonth=monthsInSpanish[0];
-    }
-    else if (month==="February"){
-        spanishMonth=monthsInSpanish[1];
 
-    }
-    else if (month==="March"){
-        spanishMonth=monthsInSpanish[2];
-
-    }else if (month==="April"){
-        spanishMonth=monthsInSpanish[3];
-
-    }else if (month==="May"){
-        spanishMonth=monthsInSpanish[4];
-
-    }
-    else if (month==="June"){
-        spanishMonth=monthsInSpanish[5];
-
-    }
-     else if (month==="July"){
-        spanishMonth=monthsInSpanish[6];
-
-    }else if (month==="August"){
-        spanishMonth=monthsInSpanish[7];
-
-    }else if (month==="September"){
-        spanishMonth=monthsInSpanish[8];
-
-    }else if (month==="October"){
-        spanishMonth=monthsInSpanish[9];
-
-    }else if (month==="November"){
-        spanishMonth=monthsInSpanish[10];
-
-    }
-    else if (month==="December"){
-        spanishMonth=monthsInSpanish[11];
-
-    }
-    return `${spanishDay} de ${spanishMonth} de ${year}`;
+    return `${spanishDay} de ${month} de ${year}`;
 }
     </script>
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,

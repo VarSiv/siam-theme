@@ -49,7 +49,20 @@ into the {body} tag of the default.hbs template --}}
             <div class="article-byline-meta">
                 <h4 class="author-name">{{authors}}</h4>
                 <div class="byline-meta-content">
-                    <time class="byline-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                                    <time class="category-post-card-date post-card-date" datetime="{{date format="YYYY-MM-DD"}}">
+    {{date format="MMMM DD, YYYY"}}
+</time>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var timeElements = document.querySelectorAll('.post-card-date');
+        
+        timeElements.forEach(function(el) {
+            var dateParts = el.textContent.trim().split(' ');
+            el.textContent = spanishDate(dateParts[0], dateParts[1], dateParts[2]);
+        });
+    });
+</script>
                     {{#if reading_time}}
                         <span class="byline-reading-time"><span class="bull">&bull;</span> {{reading_time}}</span>
                     {{/if}}
@@ -127,13 +140,13 @@ into the {body} tag of the default.hbs template --}}
 
     This query gets the latest 3 posts on the site, but adds a filter to
     exclude the post we're currently on from being included. --}}
-    {{#get "posts" filter="id:-{{id}}" limit="3" as |more_posts|}}
+    {{#get "posts" filter="id:-{{id}}" limit="3"  include="authors" as |more_posts|}}
 
         {{#if more_posts}}
             <aside class="read-more-wrap outer">
                 <div class="read-more inner">
                     {{#foreach more_posts}}
-                        {{> "sidebar-post-card"}}
+                        {{> "category-post-card"}}
                     {{/foreach}}
                 </div>
             </aside>

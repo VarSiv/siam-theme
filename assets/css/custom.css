@@ -140,6 +140,7 @@ html, body {
     color: var(--dark-blue);
 }
 a:hover {
+    color: var(--dark-blue);
     text-decoration: none;
 }
 .sidebar-post-card-date{
@@ -386,7 +387,7 @@ hr {
     margin-bottom: 5px;
 
 }
-.post-card-title:hover {
+.post-card-title:hover, .author-name:hover {
     color: var(--dark-blue);
 }
 .mobile-menu{
@@ -407,4 +408,11 @@ hr {
 ul.sub-menu::before {
     color: var(--ghost-accent-color);
     background-color: var(--ghost-accent-color);
+}
+.tag-title, .authors-title {
+    padding-top: 40px;
+    color: var(--dark-blue);
+}
+.tag-title {
+    padding-bottom: 20px;
 }
