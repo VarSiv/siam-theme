@@ -13,7 +13,6 @@
     {{!-- Preload scripts --}}
     <link rel="preload" as="style" href="{{asset "built/screen.css"}}" />
     <link rel="preload" as="script" href="{{asset "ghost-dropdown.js"}}" />
-     <link rel="preload" as="script" href="{{asset "mobile-menu.js"}}" />
 
     {{!-- Bootstrap --}}
     <meta name="viewport" content= 
@@ -162,6 +161,9 @@ $(document).ready(function() {
     x.style.display = "block";
   }
 }
+</script>
+<script src="{{asset "js/mobile-menu.js"}}">
+console.log('loaded script')
 </script>
 {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag --}}
 {{ghost_foot}}
